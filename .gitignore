@@ -4,6 +4,9 @@
 # compiled output
 build/
 
+#config build
+!config/build/
+
 # Coverage directory used by tools like istanbul
 coverage
 
