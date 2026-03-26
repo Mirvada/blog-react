@@ -9,10 +9,20 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "plugins": [
+      { 
+        "name": "typescript-plugin-css-modules" 
+      }
+    ]
   },
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs"
     }
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/global.d.ts",
+  ]
 }
