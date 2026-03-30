@@ -1,14 +1,12 @@
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router';
-import App from 'app/App';
+import { RouterProvider } from "react-router/dom";
 import { ThemeProvider } from 'app/providers/ThemeProvider';
+import { routes } from 'app/providers/routes';
 
 const root = document.getElementById('root');
 
 createRoot(root).render(
-  <BrowserRouter>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
-  </BrowserRouter>
+  <ThemeProvider>
+    <RouterProvider router={routes} />
+  </ThemeProvider>
 )
