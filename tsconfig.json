@@ -1,25 +1,32 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop" : true,
     "noImplicitAny": true,
     "module": "esnext",
-    "target": "es5",
+    "target": "es2020",
     "jsx": "react-jsx",
     "allowJs": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
+    "moduleResolution": "bundler",
+    "strict": false,
+    "resolveJsonModule": true,
     "paths": {
       "*": ["./src/*"]
     },
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "plugins": [
       { 
         "name": "typescript-plugin-css-modules" 
       }
+    ],
+    "types": [
+       "webpack/module",
+       "node"
     ]
   },
   "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
     "compilerOptions": {
       "module": "commonjs"
     }
@@ -28,5 +35,8 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/global.d.ts",
-  ]
+    "webpack.config.ts",
+    "config/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
 }
