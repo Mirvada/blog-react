@@ -6,7 +6,7 @@ import { Navbar } from 'widgets/Navbar';
 import './styles/index.scss'
 
 function App() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div className={cn('app', theme)}>
@@ -14,7 +14,6 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
-      <button onClick={toggleTheme}>Theme</button>
     </div>
   )
 }

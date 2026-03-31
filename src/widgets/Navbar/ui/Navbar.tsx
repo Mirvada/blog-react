@@ -1,4 +1,5 @@
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { cn } from 'shared/lib/cn';
 import cls from './Navbar.module.scss';
 
@@ -9,6 +10,7 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
   return (
     <div className={cn(cls.navbar, className)}>
+      <ThemeSwitcher />
       <div className={cls.links}>
           <AppLink className={cls.mainLink} theme={AppLinkTheme.SECONDARY} to={'/'}>Главная</AppLink>
           <AppLink theme={AppLinkTheme.SECONDARY} to={'/about'}>О сайте</AppLink>
