@@ -10,4 +10,16 @@
   color: var(--secondary-color);
 
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.content-page {
+  display: flex;
+}
+
+.page-wrapper {
+  padding: 20px;
+  flex-grow: 1;
 }
