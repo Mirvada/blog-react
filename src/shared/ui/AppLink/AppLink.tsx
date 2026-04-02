@@ -23,8 +23,6 @@ export const AppLink = (props: AppLinkProps) => {
     ...otherProps
   } = props;
 
-  console.log(cls.appLink);
-
   return (
     <Link 
       className={cn(cls.appLink, cls[theme], className)}
