@@ -11,15 +11,17 @@ function App() {
 
   return (
     <div className={cn('app', theme)}>
-      <Navbar />
-      <div className='content-page'>
-        <Sidebar />
-        <Suspense fallback={<div>Loading...</div>}>
-          <div className='page-wrapper'>
-            <Outlet />
-          </div>
-        </Suspense>
-      </div>
+      <Suspense fallback="">
+        <Navbar />
+        <div className='content-page'>
+          <Sidebar />
+          <Suspense fallback={<div>Loading...</div>}>
+            <div className='page-wrapper'>
+              <Outlet />
+            </div>
+          </Suspense>
+        </div>
+      </Suspense>
     </div>
   )
 }
