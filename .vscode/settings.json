@@ -4,5 +4,18 @@
     "src/shared/config/i18n"
   ],
   "i18n-ally.sourceLanguage": "ru",
-  "i18n-ally.keystyle": "nested"
+  "i18n-ally.keystyle": "nested",
+  "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "editor.formatOnSave": true,
+    "eslint.workingDirectories": [
+        { "mode": "auto" }
+    ]
 }
