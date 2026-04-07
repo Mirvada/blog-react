@@ -6,6 +6,7 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import stylistic from '@stylistic/eslint-plugin'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import i18next from 'eslint-plugin-i18next'
 
 export default [
   js.configs.recommended,
@@ -18,6 +19,7 @@ export default [
     pluginName: 'stylistic',
   }),
   reactRefresh.configs.recommended,
+  i18next.configs['flat/recommended'],
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {

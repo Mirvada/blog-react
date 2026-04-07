@@ -1,17 +1,14 @@
 :root {
-  --font-family-main: Consolas, Serif;
-
+  --font-family-main: consolas, serif;
   --font-size-base: 16px;
   --font-line-base: 24px;
   --font-base: var(--font-size-base) / var(--font-line-base) var(--font-family-main);
-
   --font-size-l: 24px;
   --font-line-l: 32px;
   --font-l: var(--font-line-l) / var(--font-line-l) var(--font-family-main);
 
-  //Размеры
+  // Размеры
   --navbar-height: 50px;
-  
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 80px;
 }

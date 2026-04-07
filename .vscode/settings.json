@@ -1,21 +1,27 @@
 {
-  "i18n-ally.localesPaths": [
-    "public/locales",
-    "src/shared/config/i18n"
-  ],
+	"i18n-ally.localesPaths": [
+		"public/locales",
+		"src/shared/config/i18n"
+	],
   "i18n-ally.sourceLanguage": "ru",
-  "i18n-ally.keystyle": "nested",
-  "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
-    },
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
-    ],
-    "editor.formatOnSave": true,
-    "eslint.workingDirectories": [
-        { "mode": "auto" }
-    ]
+	"i18n-ally.keystyle": "nested",
+	"i18n-ally.enabledFrameworks": ["react-i18next"],
+	"i18n-ally.namespace": true,
+	"i18n-ally.extract.autoDetect": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.fixAll.stylelint": "explicit"
+	},
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	"editor.formatOnSave": true,
+	"eslint.workingDirectories": [
+		{ "mode": "auto" }
+	],
+	"scss.validate": true,
+	"stylelint.validate": ["scss"],
 }
