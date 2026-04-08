@@ -53,8 +53,12 @@ export default [
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      'react/self-closing-comp': ['error', {
+        component: true,
+        html: true,
+      }],
       'react/button-has-type': ['error', { button: true, submit: true, reset: true }],
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'stylistic/semi': ['error', 'always'],
       'stylistic/member-delimiter-style': [
         'error',

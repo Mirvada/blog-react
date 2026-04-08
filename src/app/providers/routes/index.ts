@@ -1,7 +1,8 @@
+import { createBrowserRouter } from 'react-router';
 import App from 'app/App';
 import { AboutPage } from 'pages/AboutPage';
 import { MainPage } from 'pages/MainPage';
-import { createBrowserRouter } from 'react-router';
+import { NotFoundPage } from 'pages/NotFoundPage';
 
 export const routes = createBrowserRouter([
   {
@@ -10,6 +11,7 @@ export const routes = createBrowserRouter([
     children: [
       { index: true, Component: MainPage },
       { path: 'about', Component: AboutPage },
+      { path: '*', Component: NotFoundPage },
     ],
   },
 ]);

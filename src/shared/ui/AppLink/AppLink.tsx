@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { Link, LinkProps } from 'react-router';
 import { cn } from 'shared/lib/cn';
 import { AppLinkTheme } from './types';
-import cls from './AppLink.module.scss';
+import s from './AppLink.module.scss';
 interface AppLinkProps extends LinkProps {
   className?: string;
   children: ReactNode;
@@ -20,7 +20,7 @@ export const AppLink = (props: AppLinkProps) => {
 
   return (
     <Link
-      className={cn(cls.appLink, cls[theme], className)}
+      className={cn(s.appLink, s[theme], className)}
       to={to}
       {...otherProps}
     >
