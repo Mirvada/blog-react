@@ -77,6 +77,7 @@ export default [
           },
         },
       ],
+      'stylistic/max-len': ['error', { code: 100, tabWidth: 2, ignoreComments: true }],
     },
   },
   {
