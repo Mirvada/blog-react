@@ -16,6 +16,7 @@ export default [
     js: true,
     ts: true,
     jsx: true,
+    tsx: true,
     pluginName: 'stylistic',
   }),
   reactRefresh.configs.recommended,
@@ -33,6 +34,7 @@ export default [
         ...globals.browser,
         ...globals.node,
         ...globals.es2021,
+        ...globals.jest,
       },
     },
     plugins: {
@@ -59,10 +61,10 @@ export default [
         {
           multiline: {
             delimiter: 'semi',
-            requireLast: true, // требовать после последнего элемента
+            requireLast: true,
           },
           singleline: {
-            delimiter: 'semi', // точка с запятой для однострочных
+            delimiter: 'semi',
             requireLast: true,
           },
           overrides: {
