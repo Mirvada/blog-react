@@ -1,0 +1,7 @@
+{
+  "fallback": {
+    "title": "Something went wrong:",
+    "error": "unknown error",
+    "button": "Try again"
+  }
+}

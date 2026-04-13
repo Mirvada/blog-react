@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
-import { Outlet, useLocation } from 'react-router';
+import { useLocation } from 'react-router';
 import { useTheme } from './providers/ThemeProvider';
+import { AppRouter } from './providers/routes';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { PageLoader } from 'widgets/PageLoader';
@@ -19,7 +20,7 @@ function App() {
           <Sidebar />
           <div className="page-wrapper">
             <Suspense key={location.key} fallback={<PageLoader />}>
-              <Outlet />
+              <AppRouter />
             </Suspense>
           </div>
         </div>
