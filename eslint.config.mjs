@@ -85,6 +85,12 @@ export default [
     },
   },
   {
+    files: ['**/src/**/*.test.{ts,tsx}'],
+    rules: {
+      'i18next/no-literal-string': 'off',
+    },
+  },
+  {
     ignores: ['dist/**', 'build/**', 'node_modules/**', 'webpack.config.js'],
   },
 ]
