@@ -1,3 +1,4 @@
+import storybook from 'eslint-plugin-storybook'
 import js from '@eslint/js'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
@@ -21,6 +22,7 @@ export default [
   }),
   reactRefresh.configs.recommended,
   i18next.configs['flat/recommended'],
+  ...storybook.configs['flat/recommended'],
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -88,6 +90,14 @@ export default [
     files: ['**/src/**/*.test.{ts,tsx}'],
     rules: {
       'i18next/no-literal-string': 'off',
+    },
+  },
+  {
+    files: ['config/storybook/**/*.ts'],
+    languageOptions: {
+      parserOptions: {
+        project: './config/storybook/tsconfig.json',
+      },
     },
   },
   {
