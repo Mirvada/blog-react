@@ -12,7 +12,8 @@
     "lint:scss:fix": "stylelint \"**/*.scss\" --fix",
     "unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook"
+    "storybook:build": "storybook build -c ./config/storybook",
+    "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "keywords": [],
   "author": "",
@@ -42,6 +43,7 @@
     "babel-jest": "^30.3.0",
     "babel-loader": "^10.1.1",
     "babel-plugin-i18next-extract": "^1.1.0",
+    "chromatic": "^16.3.0",
     "css-loader": "^7.1.4",
     "eslint": "^9.39.4",
     "eslint-plugin-i18next": "^6.1.3",
