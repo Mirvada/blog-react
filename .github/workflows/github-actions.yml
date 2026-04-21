@@ -34,3 +34,6 @@ jobs:
       - name: Unit testing
         run: |
           npm run unit
+      - name: Storybook
+        run: |
+          npm run storybook:build
