@@ -25,15 +25,19 @@ jobs:
         run: |
           npm install
           npm run build:prod
+        if: always()
       - name: Eslint
         run: |
           npm run lint
+        if: always()
       - name: Stylelint
         run: |
           npm run lint:scss
+        if: always()
       - name: Unit testing
         run: |
           npm run unit
+        if: always()
       - name: Storybook
         run: |
           npm run storybook:build
