@@ -8,7 +8,11 @@ interface PageErrorProps extends FallbackProps {
   className?: string;
 }
 
-export const ErrorFallback = ({ className, error, resetErrorBoundary }: PageErrorProps) => {
+export const ErrorFallback = ({
+  className,
+  error,
+  resetErrorBoundary,
+}: PageErrorProps) => {
   const { t } = useTranslation('error');
 
   return (

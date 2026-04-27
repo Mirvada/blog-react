@@ -21,8 +21,16 @@ const preview: Preview = {
       toolbar: {
         icon: 'circlehollow',
         items: [
-          { value: Theme.LIGHT, icon: 'sun', title: 'Light' },
-          { value: Theme.DARK, icon: 'moon', title: 'Dark' },
+          {
+            value: Theme.LIGHT,
+            icon: 'sun',
+            title: 'Light',
+          },
+          {
+            value: Theme.DARK,
+            icon: 'moon',
+            title: 'Dark',
+          },
         ],
       },
     },
@@ -33,8 +41,14 @@ const preview: Preview = {
       toolbar: {
         icon: 'globe',
         items: [
-          { value: 'en', title: 'English' },
-          { value: 'ru', title: 'Русский' },
+          {
+            value: 'en',
+            title: 'English',
+          },
+          {
+            value: 'ru',
+            title: 'Русский',
+          },
         ],
       },
     },

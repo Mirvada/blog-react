@@ -3,9 +3,11 @@
 		"public/locales",
 		"src/shared/config/i18n"
 	],
-  "i18n-ally.sourceLanguage": "ru",
+	"i18n-ally.sourceLanguage": "ru",
 	"i18n-ally.keystyle": "nested",
-	"i18n-ally.enabledFrameworks": ["react-i18next"],
+	"i18n-ally.enabledFrameworks": [
+		"react-i18next"
+	],
 	"i18n-ally.namespace": true,
 	"i18n-ally.extract.autoDetect": true,
 	"editor.codeActionsOnSave": {
@@ -20,8 +22,18 @@
 	],
 	"editor.formatOnSave": true,
 	"eslint.workingDirectories": [
-		{ "mode": "auto" }
+		{
+			"mode": "auto"
+		}
 	],
 	"scss.validate": true,
-	"stylelint.validate": ["scss"],
+	"stylelint.validate": [
+		"scss"
+	],
+	"[javascript]": {
+		"editor.defaultFormatter": null
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": null
+	},
 }

@@ -1,7 +1,7 @@
 {
   "fallback": {
-    "button": "Попробовать снова",
-    "error": "неизвестная ошибка",
-    "title": "Что-то пошло не так:"
+    "button": "button",
+    "error": "error",
+    "title": "title"
   }
 }

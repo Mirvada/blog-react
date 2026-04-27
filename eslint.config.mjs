@@ -43,6 +43,7 @@ export default [
       '@typescript-eslint': tseslint.plugin,
       'react': reactPlugin,
       'react-hooks': reactHooksPlugin,
+      'stylistic': stylistic,
     },
     settings: {
       react: {
@@ -83,6 +84,23 @@ export default [
           },
         },
       ],
+      'stylistic/object-curly-newline': ['error', {
+        ObjectPattern: {
+          multiline: true,
+          minProperties: 3,
+          consistent: true,
+        },
+        TSInterfaceBody: {
+          multiline: true,
+          minProperties: 1,
+          consistent: true,
+        },
+      }],
+      'stylistic/object-property-newline': ['error', {
+        allowAllPropertiesOnSameLine: false,
+      }],
+      'stylistic/function-paren-newline': ['error', 'multiline-arguments'],
+      'stylistic/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
       'stylistic/max-len': ['error', { code: 100, tabWidth: 2, ignoreComments: true }],
     },
   },
