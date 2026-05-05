@@ -4,6 +4,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import App from 'app/App';
 import { ThemeProvider } from 'app/providers/ThemeProvider';
 import { ErrorFallback } from 'widgets/ErrorFallback';
+import './app/styles/index.scss';
 
 import 'shared/config/i18n/i18n';
 

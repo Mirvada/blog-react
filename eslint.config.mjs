@@ -1,3 +1,4 @@
+import { defineConfig } from 'eslint/config'
 import storybook from 'eslint-plugin-storybook'
 import js from '@eslint/js'
 import globals from 'globals'
@@ -9,7 +10,7 @@ import stylistic from '@stylistic/eslint-plugin'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import i18next from 'eslint-plugin-i18next'
 
-export default [
+export default defineConfig([
   js.configs.recommended,
   ...tseslint.configs.recommended,
   jsxA11y.flatConfigs.recommended,
@@ -21,6 +22,7 @@ export default [
     pluginName: 'stylistic',
   }),
   reactRefresh.configs.recommended,
+  reactHooksPlugin.configs.flat.recommended,
   i18next.configs['flat/recommended'],
   ...storybook.configs['flat/recommended'],
   {
@@ -63,6 +65,9 @@ export default [
       'react/button-has-type': ['error', { button: true, submit: true, reset: true }],
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'stylistic/semi': ['error', 'always'],
+      'stylistic/indent': ['error', 2],
+      'stylistic/indent-binary-ops': ['error', 2],
+      'stylistic/operator-linebreak': ['error', 'before'],
       'stylistic/member-delimiter-style': [
         'error',
         {
@@ -102,6 +107,10 @@ export default [
       'stylistic/function-paren-newline': ['error', 'multiline-arguments'],
       'stylistic/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
       'stylistic/max-len': ['error', { code: 100, tabWidth: 2, ignoreComments: true }],
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'error',
+      'jsx-a11y/no-static-element-interactions': 'off',
+      'jsx-a11y/click-events-have-key-events': 'off',
     },
   },
   {
@@ -121,4 +130,4 @@ export default [
   {
     ignores: ['dist/**', 'build/**', 'node_modules/**', 'webpack.config.js'],
   },
-]
+])
