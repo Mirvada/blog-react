@@ -2,5 +2,7 @@
   "aboutPage": "About Us",
   "lang": "English",
   "mainPage": "Main Page",
-  "shortLang": "En"
+  "shortLang": "En",
+  "decrement": "decrement",
+  "increment": "increment"
 }

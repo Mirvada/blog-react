@@ -1,5 +1,6 @@
 {
   "aboutPage": "aboutPage",
-  "mainPage": "mainPage",
-  "Войти": "Войти"
+  "decrement": "decrement",
+  "increment": "increment",
+  "mainPage": "mainPage"
 }

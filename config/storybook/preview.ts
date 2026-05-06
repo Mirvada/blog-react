@@ -3,6 +3,7 @@ import { withThemes } from '../../src/shared/config/storybook/withThemes';
 import { Theme } from '../../src/app/providers/ThemeProvider';
 import { withRouter } from '../../src/shared/config/storybook/withRouter';
 import { withI18next } from '../../src/shared/config/storybook/withI18next/withI18next';
+import { withStoreProvider } from '../../src/shared/config/storybook/withStoreProvider';
 
 const preview: Preview = {
   parameters: {
@@ -53,7 +54,7 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [withThemes, withI18next, withRouter],
+  decorators: [withThemes, withI18next, withRouter, withStoreProvider],
 };
 
 export default preview;

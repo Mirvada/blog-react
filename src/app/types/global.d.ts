@@ -1,12 +1,12 @@
 declare module '*.scss';
 
 declare module '*.module.css' {
-  const classes: { [ key: string ]: string; };
+  const classes: { [key: string]: string; };
   export default classes;
 }
 
 declare module '*.module.scss' {
-  const classes: { [ key: string ]: string; };
+  const classes: { [key: string]: string; };
   export default classes;
 }
 
@@ -21,3 +21,7 @@ declare module '*.jpeg'
 declare module '*.png'
 
 declare const __IS_DEV__: boolean;
+
+type DeepPartial<T> = {
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+};
