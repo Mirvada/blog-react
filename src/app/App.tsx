@@ -1,6 +1,5 @@
 import { Suspense } from 'react';
 import { useLocation } from 'react-router';
-import { useTheme } from './providers/ThemeProvider';
 import { AppRouter } from './providers/routes';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
@@ -8,11 +7,10 @@ import { PageLoader } from 'widgets/PageLoader';
 import { cn } from 'shared/lib/cn';
 
 function App() {
-  const { theme } = useTheme();
   const location = useLocation();
 
   return (
-    <div className={cn('app', theme)}>
+    <div className={cn('app')}>
       <Suspense fallback="">
         <Navbar />
         <div className="content-page">

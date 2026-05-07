@@ -1,10 +1,11 @@
-@use 'reset';
-@use './variables/global';
-@use './themes/light';
-@use './themes/dark';
+@use 'reset' as *;
+@use './variables/global' as * ;
+@use './themes/light' as *;
+@use './themes/dark' as *;
 
 body {
   font: var(--font-m);
+  color: var(--secondary-color);
 }
 
 .app {
@@ -12,7 +13,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-color);
-  color: var(--secondary-color);
 }
 
 .content-page {

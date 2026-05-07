@@ -2,7 +2,6 @@ import { cn } from 'shared/lib/cn';
 import s from './Modal.module.scss';
 import { ReactNode, useCallback, useEffect } from 'react';
 import { Portal } from '../Portal/Portal';
-import { useTheme } from 'app/providers/ThemeProvider';
 
 interface ModalProps {
   className?: string;
@@ -18,8 +17,6 @@ export const Modal = (props: ModalProps) => {
     isOpen,
     onClose,
   } = props;
-
-  const { theme } = useTheme();
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -45,7 +42,6 @@ export const Modal = (props: ModalProps) => {
 
   const mods = {
     [s.opened]: isOpen,
-    [theme]: theme,
   };
 
   return (
