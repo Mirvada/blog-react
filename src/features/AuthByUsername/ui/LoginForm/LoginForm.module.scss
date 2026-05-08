@@ -1,0 +1,19 @@
+.loginForm {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+
+  @media (width >= 320px) and (width <= 768px) {
+    width: 280px;
+  }
+}
+
+.input {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submitBtn {
+  margin-top: 15px;
+  margin-left: auto;
+}

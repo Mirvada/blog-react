@@ -4,5 +4,10 @@
   "mainPage": "Main Page",
   "shortLang": "En",
   "decrement": "decrement",
-  "increment": "increment"
+  "increment": "increment",
+  "login": "Login",
+  "placeholder": {
+    "password": "Enter the password",
+    "username": "Enter your name"
+  }
 }

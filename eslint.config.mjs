@@ -63,6 +63,7 @@ export default defineConfig([
         html: true,
       }],
       'react/button-has-type': ['error', { button: true, submit: true, reset: true }],
+      'react/jsx-max-props-per-line': ['error', { maximum: 2, when: 'always' }],
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'stylistic/semi': ['error', 'always'],
       'stylistic/indent': ['error', 2],

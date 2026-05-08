@@ -1,13 +1,14 @@
+import { ReactNode, useCallback, useEffect, useState } from 'react';
 import { cn } from 'shared/lib/cn';
-import s from './Modal.module.scss';
-import { ReactNode, useCallback, useEffect } from 'react';
 import { Portal } from '../Portal/Portal';
+import s from './Modal.module.scss';
 
 interface ModalProps {
   className?: string;
   children: ReactNode;
   isOpen: boolean;
   onClose: () => void;
+  lazy?: boolean;
 }
 
 export const Modal = (props: ModalProps) => {
@@ -16,7 +17,14 @@ export const Modal = (props: ModalProps) => {
     children,
     isOpen,
     onClose,
+    lazy,
   } = props;
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  const mods = {
+    [s.opened]: isOpen,
+  };
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -31,6 +39,13 @@ export const Modal = (props: ModalProps) => {
   }, [closeHandler]);
 
   useEffect(() => {
+    if (isOpen && !isMounted) {
+      // eslint-disable-next-line
+      setIsMounted(true);
+    }
+  }, [isOpen, isMounted]);
+
+  useEffect(() => {
     if (isOpen) {
       window.addEventListener('keydown', onKeyDown);
     }
@@ -40,9 +55,7 @@ export const Modal = (props: ModalProps) => {
     };
   }, [isOpen, onKeyDown]);
 
-  const mods = {
-    [s.opened]: isOpen,
-  };
+  if (lazy && !isMounted) return null;
 
   return (
     <Portal>

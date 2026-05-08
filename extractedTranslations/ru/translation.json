@@ -2,5 +2,10 @@
   "aboutPage": "aboutPage",
   "decrement": "decrement",
   "increment": "increment",
-  "mainPage": "mainPage"
+  "login": "Войти",
+  "mainPage": "mainPage",
+  "placeholder": {
+    "password": "password",
+    "username": "username"
+  }
 }
