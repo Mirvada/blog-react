@@ -63,7 +63,7 @@ export default defineConfig([
         html: true,
       }],
       'react/button-has-type': ['error', { button: true, submit: true, reset: true }],
-      'react/jsx-max-props-per-line': ['error', { maximum: 2, when: 'always' }],
+      'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'always' }],
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'stylistic/semi': ['error', 'always'],
       'stylistic/indent': ['error', 2],
@@ -107,7 +107,7 @@ export default defineConfig([
       }],
       'stylistic/function-paren-newline': ['error', 'multiline-arguments'],
       'stylistic/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
-      'stylistic/max-len': ['error', { code: 100, tabWidth: 2, ignoreComments: true }],
+      'stylistic/max-len': ['error', { code: 120, tabWidth: 2, ignoreComments: true }],
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
       'jsx-a11y/no-static-element-interactions': 'off',
@@ -129,6 +129,10 @@ export default defineConfig([
     },
   },
   {
-    ignores: ['dist/**', 'build/**', 'node_modules/**', 'webpack.config.js'],
+    ...tseslint.configs.disableTypeChecked,
+    files: ['json-server'],
+  },
+  {
+    ignores: ['dist/**', 'build/**', 'node_modules/**', 'webpack.config.js', 'json-server'],
   },
 ])

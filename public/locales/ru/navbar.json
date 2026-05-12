@@ -1,5 +1,6 @@
 {
   "mainPage": "Главная",
   "aboutPage": "О нас",
-  "login": "Войти"
+  "login": "Войти",
+  "logout": "Выйти"
 }

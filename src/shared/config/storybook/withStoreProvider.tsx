@@ -1,8 +1,12 @@
 import { Decorator } from '@storybook/react-webpack5';
-import { StoreProvider } from 'app/providers/StoreProvider';
+import { StoreProvider, StateSchema } from 'app/providers/StoreProvider';
 
-export const withStoreProvider: Decorator = Story => (
-  <StoreProvider>
-    <Story />
-  </StoreProvider>
-);
+export const withStoreProvider: Decorator = (Story, context) => {
+  const state = context.parameters.storeState as DeepPartial<StateSchema> | undefined;
+
+  return (
+    <StoreProvider initialState={state}>
+      <Story />
+    </StoreProvider>
+  );
+};

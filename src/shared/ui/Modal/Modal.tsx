@@ -62,8 +62,14 @@ export const Modal = (props: ModalProps) => {
       <div
         className={cn(s.modal, className, mods)}
       >
-        <div className={s.overlay} onClick={closeHandler}>
-          <div className={s.content} onClick={e => e.stopPropagation()}>
+        <div
+          className={s.overlay}
+          onClick={closeHandler}
+        >
+          <div
+            className={s.content}
+            onClick={e => e.stopPropagation()}
+          >
             {children}
           </div>
         </div>

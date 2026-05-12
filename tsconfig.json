@@ -2,7 +2,7 @@
   "compilerOptions": {
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop" : true,
+    "esModuleInterop": true,
     "noImplicitAny": true,
     "module": "esnext",
     "target": "es2020",
@@ -12,17 +12,19 @@
     "strict": false,
     "resolveJsonModule": true,
     "paths": {
-      "*": ["./src/*"]
+      "*": [
+        "./src/*"
+      ]
     },
     "plugins": [
-      { 
-        "name": "typescript-plugin-css-modules" 
+      {
+        "name": "typescript-plugin-css-modules"
       }
     ],
     "types": [
-       "webpack/module",
-       "node",
-       "@testing-library/jest-dom"
+      "webpack/module",
+      "node",
+      "@testing-library/jest-dom"
     ]
   },
   "ts-node": {
@@ -41,5 +43,8 @@
     "./config/jest/jestEmptyComponent.tsx",
     "config/**/*.ts",
   ],
-  "exclude": ["node_modules", "config/storybook"]
+  "exclude": [
+    "node_modules",
+    "config/storybook",
+  ]
 }

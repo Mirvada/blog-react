@@ -9,5 +9,8 @@
   "placeholder": {
     "password": "Enter the password",
     "username": "Enter your name"
-  }
+  },
+  "authFormTitle": "Auth form",
+  "authError": "Incorrect username or password",
+  "logout": "Logout"
 }

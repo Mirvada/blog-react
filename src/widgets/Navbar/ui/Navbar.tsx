@@ -1,5 +1,7 @@
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAppDispatch, useAppSelector } from 'app/providers/StoreProvider';
+import { getUserAuthData, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUsername';
 import { Button } from 'shared/ui/Button';
 import { cn } from 'shared/lib/cn';
@@ -14,6 +16,9 @@ export const Navbar = ({ className }: NavbarProps) => {
 
   const [isAuthModal, setIsAuthModal] = useState(false);
 
+  const authData = useAppSelector(getUserAuthData);
+  const dispatch = useAppDispatch();
+
   const onShowModal = useCallback(() => {
     setIsAuthModal(true);
   }, []);
@@ -22,17 +27,37 @@ export const Navbar = ({ className }: NavbarProps) => {
     setIsAuthModal(false);
   }, []);
 
-  return (
-    <div className={cn(s.navbar, className)}>
-      <div className={s.links}>
+  const onLogout = useCallback(() => {
+    dispatch(userActions.logout());
+  }, [dispatch]);
+
+  if (authData) {
+    return (
+      <div className={cn(s.navbar, className)}>
         <Button
+          className={s.authBtn}
           theme="clearInverted"
-          onClick={onShowModal}
+          onClick={onLogout}
         >
-          {t('login')}
+          {t('logout')}
         </Button>
       </div>
-      <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+    );
+  }
+
+  return (
+    <div className={cn(s.navbar, className)}>
+      <Button
+        className={s.authBtn}
+        theme="clearInverted"
+        onClick={onShowModal}
+      >
+        {t('login')}
+      </Button>
+      <LoginModal
+        isOpen={isAuthModal}
+        onClose={onCloseModal}
+      />
     </div>
   );
 };

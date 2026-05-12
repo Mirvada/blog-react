@@ -1,5 +1,8 @@
 {
+  "": "",
   "aboutPage": "aboutPage",
+  "authError": "authError",
+  "authFormTitle": "authFormTitle",
   "decrement": "decrement",
   "increment": "increment",
   "login": "Войти",
