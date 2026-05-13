@@ -65,6 +65,7 @@ export default defineConfig([
       'react/button-has-type': ['error', { button: true, submit: true, reset: true }],
       'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'always' }],
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      "@typescript-eslint/ban-ts-comment": 'warn',
       'stylistic/semi': ['error', 'always'],
       'stylistic/indent': ['error', 2],
       'stylistic/indent-binary-ops': ['error', 2],
