@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import LoginForm from './LoginForm';
 import { withStoreProvider } from 'shared/config/storybook/withStoreProvider';
+import LoginForm from './LoginForm';
 
 const meta = {
   title: 'features/LoginForm',
