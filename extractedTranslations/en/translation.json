@@ -1,5 +1,5 @@
 {
-  "": "",
+  "PROFILE_PAGE": "PROFILE_PAGE",
   "aboutPage": "aboutPage",
   "authError": "authError",
   "authFormTitle": "authFormTitle",
@@ -10,5 +10,6 @@
   "placeholder": {
     "password": "password",
     "username": "username"
-  }
+  },
+  "profilePage": "profilePage"
 }

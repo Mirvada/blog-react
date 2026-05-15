@@ -1,26 +1,30 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { RouterPath } from 'shared/config/routerConfig/routerConfig';
+import { memo, useMemo, useState } from 'react';
 import { Button } from 'shared/ui/Button';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink';
-import AboutIcon from 'shared/assets/icons/about.svg';
-import MainIcon from 'shared/assets/icons/main.svg';
+import { cn } from 'shared/lib/cn';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
-import { cn } from 'shared/lib/cn';
+import { SidebarItemsList } from '../../model/items';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
 import s from './Sidebar.module.scss';
 
 interface SidebarProps {
   className?: string;
 }
 
-export const Sidebar = ({ className }: SidebarProps) => {
-  const { t } = useTranslation();
+export const Sidebar = memo(function Sidebar({ className }: SidebarProps) {
   const [collapsed, setCollapsed] = useState(false);
 
   const onToggle = () => {
     setCollapsed(prev => !prev);
   };
+
+  const itemList = useMemo(() => SidebarItemsList.map(item => (
+    <SidebarItem
+      key={item.path}
+      item={item}
+      collapsed={collapsed}
+    />
+  )), [collapsed]);
 
   return (
     <div
@@ -39,26 +43,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
         {collapsed ? '>' : '<'}
       </Button>
       <div className={s.items}>
-        <AppLink
-          theme={AppLinkTheme.PRIMARY}
-          to={RouterPath.main}
-          className={s.item}
-        >
-          <MainIcon className={s.icon} />
-          <span className={s.link}>
-            {t('mainPage')}
-          </span>
-        </AppLink>
-        <AppLink
-          theme={AppLinkTheme.PRIMARY}
-          to={RouterPath.about}
-          className={s.item}
-        >
-          <AboutIcon className={s.icon} />
-          <span className={s.link}>
-            {t('aboutPage')}
-          </span>
-        </AppLink>
+        {itemList}
       </div>
       <div className={s.switchers}>
         <ThemeSwitcher />
@@ -66,4 +51,4 @@ export const Sidebar = ({ className }: SidebarProps) => {
       </div>
     </div>
   );
-};
+});

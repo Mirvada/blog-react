@@ -12,5 +12,6 @@
   },
   "authFormTitle": "Auth form",
   "authError": "Incorrect username or password",
-  "logout": "Logout"
+  "logout": "Logout",
+  "profilePage": "Profile"
 }

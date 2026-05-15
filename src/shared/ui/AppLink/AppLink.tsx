@@ -1,15 +1,16 @@
-import { ReactNode } from 'react';
+import { memo, ReactNode } from 'react';
 import { Link, LinkProps } from 'react-router';
 import { cn } from 'shared/lib/cn';
 import { AppLinkTheme } from './types';
 import s from './AppLink.module.scss';
+
 interface AppLinkProps extends LinkProps {
   className?: string;
   children: ReactNode;
   theme?: AppLinkTheme;
 }
 
-export const AppLink = (props: AppLinkProps) => {
+export const AppLink = memo(function AppLink(props: AppLinkProps) {
   const {
     to,
     className,
@@ -27,4 +28,4 @@ export const AppLink = (props: AppLinkProps) => {
       {children}
     </Link>
   );
-};
+});

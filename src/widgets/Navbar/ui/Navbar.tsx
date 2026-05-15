@@ -1,11 +1,12 @@
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useAppDispatch, useAppSelector } from 'app/providers/StoreProvider';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { getUserAuthData, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUsername';
 import { Button } from 'shared/ui/Button';
 import { cn } from 'shared/lib/cn';
 import s from './Navbar.module.scss';
+import { useSelector } from 'react-redux';
 
 interface NavbarProps {
   className?: string;
@@ -16,7 +17,7 @@ export const Navbar = ({ className }: NavbarProps) => {
 
   const [isAuthModal, setIsAuthModal] = useState(false);
 
-  const authData = useAppSelector(getUserAuthData);
+  const authData = useSelector(getUserAuthData);
   const dispatch = useAppDispatch();
 
   const onShowModal = useCallback(() => {

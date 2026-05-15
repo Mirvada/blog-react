@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { cn } from 'shared/lib/cn';
 import s from './Text.module.scss';
 
@@ -10,7 +11,7 @@ interface TextProps {
   theme?: TextTheme;
 }
 
-export const Text = (props: TextProps) => {
+export const Text = memo(function Text(props: TextProps) {
   const {
     className,
     title,
@@ -26,4 +27,4 @@ export const Text = (props: TextProps) => {
       {text && <p className={s.text}>{text}</p>}
     </div>
   );
-};
+});

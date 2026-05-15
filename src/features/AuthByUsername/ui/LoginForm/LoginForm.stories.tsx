@@ -12,7 +12,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    onSuccess: () => false,
+  },
+};
 
 export const WithPrefilled: Story = {
   parameters: {
@@ -23,6 +27,9 @@ export const WithPrefilled: Story = {
       },
     },
   },
+  args: {
+    onSuccess: () => false,
+  },
 };
 
 export const WithError: Story = {
@@ -31,6 +38,9 @@ export const WithError: Story = {
       loginForm: { error: 'Вы ввели неверный логин или пароль' },
     },
   },
+  args: {
+    onSuccess: () => false,
+  },
 };
 
 export const Loading: Story = {
@@ -38,5 +48,8 @@ export const Loading: Story = {
     storeState: {
       loginForm: { isLoading: true },
     },
+  },
+  args: {
+    onSuccess: () => false,
   },
 };

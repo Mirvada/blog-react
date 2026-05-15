@@ -26,6 +26,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "firstName": "Mir",
+    "lastName": "Mur",
+    "age": 22,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://i.pinimg.com/736x/f6/60/a8/f660a85dd350ba9be384073af7d70e7a.jpg"
   }
 }
