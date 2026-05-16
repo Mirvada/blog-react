@@ -12,13 +12,13 @@ import 'shared/config/i18n/i18n';
 const root = document.getElementById('root');
 
 createRoot(root).render(
-  <StoreProvider>
-    <BrowserRouter>
+  <BrowserRouter>
+    <StoreProvider>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <ThemeProvider>
           <App />
         </ThemeProvider>
       </ErrorBoundary>
-    </BrowserRouter>
-  </StoreProvider>,
+    </StoreProvider>
+  </BrowserRouter>,
 );

@@ -54,6 +54,7 @@ const config: Config = {
   },
   globals: {
     __IS_DEV__: true, // or false, depending on your test needs
+    __API__: '',
   },
 
   // Indicates whether the coverage information should be collected while executing the test
