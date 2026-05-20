@@ -12,6 +12,8 @@ if (typeof global.TextDecoder === 'undefined') {
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (str: string) => str,
+    // код из документации https://react.i18next.com/misc/testing
+    // eslint-disable-next-line
     i18n: { changeLanguage: () => new Promise(() => { }) },
   }),
   initReactI18next: {

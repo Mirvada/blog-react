@@ -6,6 +6,8 @@ describe('getLoginUsername', () => {
     const state: DeepPartial<StateSchema> = {
       loginForm: {
         username: 'Alex',
+        password: '',
+        isLoading: false,
       },
     };
     expect(getLoginUsername(state as StateSchema)).toEqual('Alex');

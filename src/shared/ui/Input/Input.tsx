@@ -48,7 +48,7 @@ export const Input = memo(function Input(props: InputProps) {
     >
       {placeholder && (
         <span>
-          {placeholder}
+          {`${placeholder}>`}
         </span>
       )}
       <input

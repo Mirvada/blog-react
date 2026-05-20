@@ -11,6 +11,10 @@ import 'shared/config/i18n/i18n';
 
 const root = document.getElementById('root');
 
+if (!root) {
+  throw new Error('Root container not found. Can\'t mount react app.');
+}
+
 createRoot(root).render(
   <BrowserRouter>
     <StoreProvider>

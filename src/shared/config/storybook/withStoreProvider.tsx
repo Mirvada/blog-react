@@ -1,9 +1,11 @@
+import { Reducer } from '@reduxjs/toolkit';
 import { Decorator } from '@storybook/react-webpack5';
 import { StoreProvider, StateSchema } from 'app/providers/StoreProvider';
-import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
+import { LoginSchema } from 'features/AuthByUsername';
+import { loginReducer } from 'features/AuthByUsername';
 
 const defaultAsyncReducers = {
-  loginForm: loginReducer,
+  loginForm: loginReducer as Reducer<LoginSchema | undefined>,
 };
 
 export const withStoreProvider: Decorator = (Story, context) => {

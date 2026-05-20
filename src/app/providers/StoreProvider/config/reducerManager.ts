@@ -7,7 +7,7 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
 
   let combinedReducer = combineReducers(reducers);
 
-  let keysToRemove: Array<StateSchemaKey> = [];
+  let keysToRemove: StateSchemaKey[] = [];
 
   return {
     getReducerMap: () => reducers,
@@ -21,6 +21,7 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
         keysToRemove = [];
       }
 
+      // @ts-expect-error: https://redux.js.org/usage/code-splitting
       return combinedReducer(state, action);
     },
 

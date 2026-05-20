@@ -13,6 +13,7 @@ import i18next from 'eslint-plugin-i18next'
 export default defineConfig([
   js.configs.recommended,
   ...tseslint.configs.recommended,
+  ...tseslint.configs.stylistic,
   jsxA11y.flatConfigs.recommended,
   stylistic.configs.customize({
     js: true,
@@ -46,6 +47,7 @@ export default defineConfig([
       'react': reactPlugin,
       'react-hooks': reactHooksPlugin,
       'stylistic': stylistic,
+      'eslint': js,
     },
     settings: {
       react: {
@@ -66,6 +68,8 @@ export default defineConfig([
       'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'always' }],
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/ban-ts-comment': 'warn',
+      '@typescript-eslint/no-base-to-string': 'off',
+      '@typescript-eslint/prefer-includes': 'off',
       'stylistic/semi': ['error', 'always'],
       'stylistic/indent': ['error', 2],
       'stylistic/indent-binary-ops': ['error', 2],

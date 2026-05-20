@@ -9,7 +9,7 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "bundler",
-    "strict": false,
+    "strict": true,
     "resolveJsonModule": true,
     "paths": {
       "*": [

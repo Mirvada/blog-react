@@ -6,7 +6,7 @@ import { memo } from 'react';
 import { cn } from 'shared/lib/cn';
 
 interface SidebarItemProps {
-  item?: SidebarItemsType;
+  item: SidebarItemsType;
   collapsed: boolean;
 }
 

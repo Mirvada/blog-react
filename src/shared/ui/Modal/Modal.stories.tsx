@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react-webpack5';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
 import { Modal } from './Modal';
 
@@ -12,23 +12,27 @@ const meta = {
 } satisfies Meta<typeof Modal>;
 
 export default meta;
+type Story = StoryObj<typeof Modal>;
 
-export const OpenLightTheme = Modal.bind({});
-OpenLightTheme.args = {
-  children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Natus, necessitatibus',
-  isOpen: true,
-  className: 'light',
+export const OpenLightTheme: Story = {
+  args: {
+    children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Natus, necessitatibus',
+    isOpen: true,
+    className: 'light',
+  },
 };
 
-export const OpenDarkTheme = Modal.bind({});
-OpenDarkTheme.args = {
-  children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Natus, necessitatibus',
-  isOpen: true,
-  className: 'dark',
+export const OpenDarkTheme: Story = {
+  args: {
+    children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Natus, necessitatibus',
+    isOpen: true,
+    className: 'dark',
+  },
 };
 
-export const Closed = Modal.bind({});
-Closed.args = {
-  children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Natus, necessitatibus',
-  isOpen: false,
+export const Closed: Story = {
+  args: {
+    children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Natus, necessitatibus',
+    isOpen: false,
+  },
 };

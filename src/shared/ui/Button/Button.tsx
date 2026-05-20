@@ -16,14 +16,14 @@ export const Button = memo(function Button(props: ButtonProps) {
   const {
     className,
     children,
-    theme,
+    theme = 'clear',
     square,
     size = 'sizeM',
     disabled,
     ...otherProps
   } = props;
 
-  const mods: Record<string, boolean> = {
+  const mods: Record<string, boolean | undefined> = {
     [s[theme]]: true,
     [s.square]: square,
     [s[size]]: true,

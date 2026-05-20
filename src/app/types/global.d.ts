@@ -1,14 +1,14 @@
-declare module '*.scss';
-
 declare module '*.module.css' {
-  const classes: { [key: string]: string; };
+  const classes: Readonly<Record<string, string>>;
   export default classes;
 }
 
 declare module '*.module.scss' {
-  const classes: { [key: string]: string; };
+  const classes: Record<string, string>;
   export default classes;
 }
+
+declare module '*.scss';
 
 declare module '*.svg' {
   import React from 'react';

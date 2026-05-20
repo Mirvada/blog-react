@@ -1,4 +1,4 @@
-import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
+import { configureStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
 import { StateSchema } from './StateSchema';
@@ -20,7 +20,7 @@ export function createReduxStore(
   const reducerManager = createReducerManager(rootReducers);
 
   const store = configureStore({
-    reducer: reducerManager.reduce,
+    reducer: reducerManager.reduce as Reducer<StateSchema>,
     devTools: __IS_DEV__,
     preloadedState: initialState,
     middleware: getDefaultMiddleware => getDefaultMiddleware({
@@ -33,7 +33,7 @@ export function createReduxStore(
     }),
   });
 
-  // @ts-ignore
+  // @ts-expect-error: https://redux.js.org/usage/code-splitting
   store.reducerManager = reducerManager;
 
   return store;

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
-import { useTheme } from 'storybook/theming';
+import { useTheme } from 'app/providers/ThemeProvider';
 
 interface PortalProps {
   children: ReactNode;
