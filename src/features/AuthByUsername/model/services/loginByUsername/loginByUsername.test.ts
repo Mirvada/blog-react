@@ -1,12 +1,7 @@
-import axios from 'axios';
 import { userActions } from 'entities/User';
 import type { User } from 'entities/User';
-import { loginByUsername } from './loginByUsername';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk';
-
-jest.mock('axios');
-
-const mockedAxios = axios as jest.Mocked<typeof axios>;
+import { loginByUsername } from './loginByUsername';
 
 describe('loginByUsername', () => {
   // let dispatch: Dispatch;
@@ -21,6 +16,8 @@ describe('loginByUsername', () => {
     username: '123',
     id: '1',
   };
+
+  const thunk = new TestAsyncThunk(loginByUsername);
 
   // test('should login successfully', async () => {
   //   mockedAxios.post.mockReturnValue(Promise.resolve({ data: userValue }));
@@ -55,9 +52,8 @@ describe('loginByUsername', () => {
   // });
 
   test('should login successfully', async () => {
-    mockedAxios.post.mockReturnValue(Promise.resolve({ data: userValue }));
+    thunk.api.post.mockReturnValue(Promise.resolve({ data: userValue }));
 
-    const thunk = new TestAsyncThunk(loginByUsername);
     const result = await thunk.callThunk({
       username: 'admin',
       password: '123',
@@ -65,22 +61,21 @@ describe('loginByUsername', () => {
 
     expect(thunk.dispatch).toHaveBeenCalledWith(userActions.setAuthData(userValue));
     expect(thunk.dispatch).toHaveBeenCalledTimes(3);
-    expect(mockedAxios.post).toHaveBeenCalled();
+    expect(thunk.api.post).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe('fulfilled');
     expect(result.payload).toEqual(userValue);
   });
 
   test('should login error', async () => {
-    mockedAxios.post.mockReturnValue(Promise.resolve({ status: 403 }));
+    thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }));
 
-    const thunk = new TestAsyncThunk(loginByUsername);
     const result = await thunk.callThunk({
       username: 'admin',
       password: '123',
     });
 
     expect(thunk.dispatch).toHaveBeenCalledTimes(2);
-    expect(mockedAxios.post).toHaveBeenCalled();
+    expect(thunk.api.post).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe('rejected');
     expect(result.payload).toEqual('authError');
   });

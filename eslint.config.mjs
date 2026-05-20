@@ -69,6 +69,7 @@ export default defineConfig([
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/ban-ts-comment': 'warn',
       '@typescript-eslint/no-base-to-string': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/prefer-includes': 'off',
       'stylistic/semi': ['error', 'always'],
       'stylistic/indent': ['error', 2],
