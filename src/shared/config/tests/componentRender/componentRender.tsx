@@ -12,10 +12,10 @@ export function componentRender(component: ReactNode, options: componentRenderOp
   const { route = '/', initialState } = options;
 
   return render(
-    <StoreProvider initialState={initialState}>
-      <MemoryRouter initialEntries={[route]}>
+    <MemoryRouter initialEntries={[route]}>
+      <StoreProvider initialState={initialState}>
         {component}
-      </MemoryRouter>
-    </StoreProvider>,
+      </StoreProvider>
+    </MemoryRouter>,
   );
 };
