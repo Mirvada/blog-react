@@ -22,8 +22,6 @@ export const profileSlice = createSlice({
         ...state.form,
         ...action.payload,
       };
-
-      console.log(state.form);
     },
     cancelEdit: (state) => {
       state.readonly = true;
