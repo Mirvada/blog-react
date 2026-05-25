@@ -2,13 +2,14 @@ import { ChangeEvent, InputHTMLAttributes, memo, useEffect, useRef } from 'react
 import { cn } from 'shared/lib/cn';
 import s from './Input.module.scss';
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>;
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>;
 
 interface InputProps extends HTMLInputProps {
   className?: string;
-  value?: string;
+  value?: string | number;
   onChange?: (value: string) => void;
   autofocus?: boolean;
+  readOnly?: boolean;
 }
 
 export const Input = memo(function Input(props: InputProps) {
@@ -19,6 +20,7 @@ export const Input = memo(function Input(props: InputProps) {
     type = 'text',
     placeholder,
     autofocus,
+    readOnly,
     ...otherProps
   } = props;
 
@@ -52,15 +54,14 @@ export const Input = memo(function Input(props: InputProps) {
         </span>
       )}
       <input
-        className={s.input}
+        className={cn(s.input, readOnly && s.readOnly)}
         type={type}
-        name=""
-        id=""
         value={value}
         onChange={onChangeHandler}
         onFocus={onFocus}
         onBlur={onBlur}
         ref={ref}
+        readOnly={readOnly}
         {...otherProps}
       />
     </label>

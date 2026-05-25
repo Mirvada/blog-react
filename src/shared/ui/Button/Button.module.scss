@@ -22,6 +22,12 @@
   color: var(--primary-color);
 }
 
+.outlineRed {
+  border: 1px solid var(--red-light);
+  background: none;
+  color: var(--red-light);
+}
+
 .background {
   background-color: var(--bg-color);
   color: var(--primary-color);
@@ -30,12 +36,12 @@
 
 .backgroundInverted {
   background-color: var(--inverted-bg-color);
-  color:var(--inverted-primary-color);
+  color: var(--inverted-primary-color);
   border: none;
 }
 
 .square {
-  padding: 0; 
+  padding: 0;
 
   &.sizeM {
     width: var(--font-line-m);

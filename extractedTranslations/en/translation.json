@@ -1,4 +1,6 @@
 {
+  "COUNTRY": "COUNTRY",
+  "CURRENCY": "CURRENCY",
   "PROFILE_PAGE": "PROFILE_PAGE",
   "aboutPage": "aboutPage",
   "authError": "authError",

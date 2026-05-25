@@ -13,5 +13,7 @@
   "authFormTitle": "Auth form",
   "authError": "Incorrect username or password",
   "logout": "Logout",
-  "profilePage": "Profile"
+  "profilePage": "Profile",
+  "CURRENCY": "",
+  "COUNTRY": ""
 }

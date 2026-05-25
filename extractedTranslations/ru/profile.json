@@ -1,8 +1,18 @@
 {
   "": "",
+  "AGE": "AGE",
+  "AVATAR": "AVATAR",
+  "CANCEL": "CANCEL",
+  "CITY": "CITY",
+  "Cancel": "Cancel",
   "EDIT": "EDIT",
+  "ERROR_TEXT": "ERROR_TEXT",
+  "ERROR_TITLE": "ERROR_TITLE",
   "LASTNAME": "LASTNAME",
   "LAST_NAME": "LAST_NAME",
   "NAME": "NAME",
-  "PROFILE": "PROFILE"
+  "PROFILE": "PROFILE",
+  "RESET": "RESET",
+  "SAVE": "SAVE",
+  "USERNAME": "USERNAME"
 }

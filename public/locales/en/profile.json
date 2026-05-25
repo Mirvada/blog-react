@@ -1,6 +1,14 @@
 {
   "PROFILE": "Profile",
   "EDIT": "Edit",
+  "SAVE": "Save",
+  "CANCEL": "Cancel",
   "NAME": "Your name",
-  "LAST_NAME": "Your last name"
+  "LAST_NAME": "Your last name",
+  "ERROR_TITLE": "",
+  "ERROR_TEXT": "",
+  "AGE": "",
+  "CITY": "",
+  "USERNAME": "",
+  "AVATAR": ""
 }
