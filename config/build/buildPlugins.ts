@@ -10,7 +10,7 @@ export function buildPlugins({
   isDev,
   apiUrl,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-  const plugins = [
+  const plugins: webpack.WebpackPluginInstance[] = [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
       template: paths.html,

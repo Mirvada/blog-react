@@ -1,5 +1,4 @@
 import { defineConfig } from 'eslint/config'
-import storybook from 'eslint-plugin-storybook'
 import js from '@eslint/js'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
@@ -25,7 +24,6 @@ export default defineConfig([
   reactRefresh.configs.recommended,
   reactHooksPlugin.configs.flat.recommended,
   i18next.configs['flat/recommended'],
-  ...storybook.configs['flat/recommended'],
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
