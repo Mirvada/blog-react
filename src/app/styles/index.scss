@@ -1,7 +1,8 @@
 @use 'reset' as *;
-@use './variables/global' as * ;
+@use './variables/global' as *;
 @use './themes/light' as *;
 @use './themes/dark' as *;
+@use './themes/green.scss' as *;
 
 body {
   font: var(--font-m);
