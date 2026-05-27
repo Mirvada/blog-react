@@ -1,16 +1,18 @@
 import { Suspense, useEffect } from 'react';
 import { useLocation } from 'react-router';
-import { AppRouter } from './providers/routes';
+import { useSelector } from 'react-redux';
+import { getUserInitiated, userActions } from 'entities/User';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { PageLoader } from 'widgets/PageLoader';
 import { cn } from 'shared/lib/cn';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { userActions } from 'entities/User';
+import { AppRouter } from './providers/routes';
 
 function App() {
   const location = useLocation();
   const dispatch = useAppDispatch();
+  const initiated = useSelector(getUserInitiated);
 
   useEffect(() => {
     dispatch(userActions.initAuthData());
@@ -27,7 +29,7 @@ function App() {
               key={location.key}
               fallback={<PageLoader />}
             >
-              <AppRouter />
+              {initiated && <AppRouter />}
             </Suspense>
           </div>
         </div>
