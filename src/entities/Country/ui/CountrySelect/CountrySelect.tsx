@@ -38,7 +38,7 @@ export const CountrySelect = memo(function CurrencySelect(props: CountrySelectPr
     readonly,
   } = props;
 
-  const { t } = useTranslation();
+  const { t } = useTranslation('profile');
 
   const onChangeHandler = useCallback((value: string) => {
     if (onChange) {

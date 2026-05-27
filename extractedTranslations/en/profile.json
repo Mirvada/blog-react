@@ -1,18 +1,40 @@
 {
-  "": "",
   "AGE": "AGE",
   "AVATAR": "AVATAR",
   "CANCEL": "CANCEL",
   "CITY": "CITY",
+  "COUNTRY": "COUNTRY",
+  "CURRENCY": "CURRENCY",
   "Cancel": "Cancel",
   "EDIT": "EDIT",
   "ERROR_TEXT": "ERROR_TEXT",
   "ERROR_TITLE": "ERROR_TITLE",
-  "LASTNAME": "LASTNAME",
   "LAST_NAME": "LAST_NAME",
   "NAME": "NAME",
   "PROFILE": "PROFILE",
   "RESET": "RESET",
   "SAVE": "SAVE",
-  "USERNAME": "USERNAME"
+  "USERNAME": "USERNAME",
+  "profile": {
+    "validation": {
+      "incorrect_age": "incorrect_age",
+      "incorrect_avatar": "incorrect_avatar",
+      "incorrect_city": "incorrect_city",
+      "incorrect_first_name": "incorrect_first_name",
+      "incorrect_last_name": "incorrect_last_name",
+      "incorrect_username": "incorrect_username",
+      "no_data": "no_data",
+      "server_error": "server_error"
+    }
+  },
+  "validation": {
+    "incorrect_age": "incorrect_age",
+    "incorrect_avatar": "incorrect_avatar",
+    "incorrect_city": "incorrect_city",
+    "incorrect_first_name": "incorrect_first_name",
+    "incorrect_last_name": "incorrect_last_name",
+    "incorrect_username": "incorrect_username",
+    "no_data": "no_data",
+    "server_error": "server_error"
+  }
 }

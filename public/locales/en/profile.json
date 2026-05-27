@@ -5,10 +5,22 @@
   "CANCEL": "Cancel",
   "NAME": "Your name",
   "LAST_NAME": "Your last name",
-  "ERROR_TITLE": "",
-  "ERROR_TEXT": "",
-  "AGE": "",
-  "CITY": "",
-  "USERNAME": "",
-  "AVATAR": ""
+  "ERROR_TITLE": "Error loading profile",
+  "ERROR_TEXT": "Try refreshing the page",
+  "AGE": "Your age",
+  "CITY": "City",
+  "USERNAME": "Enter username",
+  "AVATAR": "Enter avatar link",
+  "COUNTRY": "Select country",
+  "CURRENCY": "Select currency",
+  "validation": {
+    "incorrect_age": "Age must be a positive number from 1 to 120",
+    "incorrect_avatar": "Avatar URL must be a valid URL (http:// or https://)",
+    "incorrect_city": "City cannot be empty",
+    "incorrect_first_name": "First name cannot be empty or contain invalid characters",
+    "incorrect_last_name": "Last name cannot be empty or contain invalid characters",
+    "incorrect_username": "Username must be 3-20 characters long, containing only letters, numbers and underscores",
+    "no_data": "Profile data not received from server",
+    "server_error": "A server error occurred. Please try again later."
+  }
 }
