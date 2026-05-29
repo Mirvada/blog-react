@@ -14,6 +14,5 @@
   "authError": "Incorrect username or password",
   "logout": "Logout",
   "profilePage": "Profile",
-  "CURRENCY": "",
-  "COUNTRY": ""
+  "articlesPage": "Articles"
 }

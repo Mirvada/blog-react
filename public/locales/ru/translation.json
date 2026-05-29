@@ -13,6 +13,5 @@
   "authFormTitle": "Форма авторизации",
   "authError": "Вы ввели неверный логин или пароль",
   "profilePage": "Профиль",
-  "CURRENCY": "Укажите валюту",
-  "COUNTRY": "Укажите страну"
+  "articlesPage": "Статьи"
 }
