@@ -1,5 +1,10 @@
 .appLink {
   text-decoration: none;
+  transition: opacity 0.3s ease-in;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .primary {
@@ -8,4 +13,4 @@
 
 .secondary {
   color: var(--secondary-color);
-} 
+}

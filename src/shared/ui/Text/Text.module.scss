@@ -1,12 +1,10 @@
 .primary,
 .title {
-  font: var(--font-l);
   color: var(--primary-color);
 }
 
 .primary,
 .text {
-  font: var(--font-m);
   color: var(--secondary-color);
 }
 
@@ -31,3 +29,25 @@
 .right {
   text-align: right;
 }
+
+.sizeM {
+  .title {
+    font: var(--font-l);
+  }
+
+  .text {
+    font: var(--font-m);
+  }
+}
+
+.sizeL {
+  .title {
+    font: var(--font-xl);
+  }
+
+  .text {
+    font: var(--font-l);
+  }
+}
+
+.sizeXL {}

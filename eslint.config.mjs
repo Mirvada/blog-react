@@ -112,6 +112,7 @@ export default defineConfig([
       'stylistic/function-paren-newline': ['error', 'multiline-arguments'],
       'stylistic/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
       'stylistic/max-len': ['error', { code: 120, tabWidth: 2, ignoreComments: true }],
+      'stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
       'jsx-a11y/no-static-element-interactions': 'off',
