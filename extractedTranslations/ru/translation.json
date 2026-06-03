@@ -5,6 +5,7 @@
   "aboutPage": "aboutPage",
   "authError": "authError",
   "authFormTitle": "authFormTitle",
+  "commentsNotFound": "commentsNotFound",
   "decrement": "decrement",
   "increment": "increment",
   "login": "Войти",

@@ -109,13 +109,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://img.magnific.com/premium-photo/cat-lawyer-working-office_548729-13424.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://i.pinimg.com/736x/f6/60/a8/f660a85dd350ba9be384073af7d70e7a.jpg"
     }
   ],
   "profile": {

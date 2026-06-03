@@ -13,5 +13,6 @@
   "authFormTitle": "Форма авторизации",
   "authError": "Вы ввели неверный логин или пароль",
   "profilePage": "Профиль",
-  "articlesPage": "Статьи"
+  "articlesPage": "Статьи",
+  "commentsNotFound": "Комментарии не найдены"
 }

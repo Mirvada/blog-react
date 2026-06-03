@@ -14,5 +14,6 @@
   "authError": "Incorrect username or password",
   "logout": "Logout",
   "profilePage": "Profile",
-  "articlesPage": "Articles"
+  "articlesPage": "Articles",
+  "commentsNotFound": "Comments not found"
 }
