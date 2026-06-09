@@ -23,8 +23,7 @@ export const fetchArticleById = createAsyncThunk<
       }
 
       return response.data;
-    }
-    catch (error) {
+    } catch (error) {
       console.log(error);
       return rejectWithValue(i18n.t(['authError']));
     }

@@ -1,6 +1,7 @@
 import { useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router';
 import {
   fetchProfileData,
   getProfileForm,
@@ -32,6 +33,7 @@ const initialReducers: ReducerList = {
 const ProfilePage = ({ className }: ProfilePageProps) => {
   const { t } = useTranslation('profile');
   const dispatch = useAppDispatch();
+  const { id } = useParams<{ id: string; }>();
 
   const formData = useSelector(getProfileForm);
   const isLoading = useSelector(getProfileIsLoading);
@@ -51,8 +53,10 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   };
 
   useEffect(() => {
-    dispatch(fetchProfileData());
-  }, [dispatch]);
+    if (id) {
+      dispatch(fetchProfileData(id));
+    }
+  }, [dispatch, id]);
 
   const onChangeFirstName = useCallback((value?: string) => {
     dispatch(profileActions.updateProfile({ firstName: value || '' }));

@@ -1,14 +1,16 @@
 import { memo } from 'react';
+import { AppLink } from 'shared/ui/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Text } from 'shared/ui/Text/Text';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { RouterPath } from 'shared/config/routerConfig/routerConfig';
 import { cn } from 'shared/lib/cn';
 import { Comment } from '../../model/types/comment';
 import s from './CommentCard.module.scss';
 
 interface CommentCardProps {
   className?: string;
-  comment: Comment;
+  comment?: Comment;
   isLoading?: boolean;
 }
 
@@ -22,7 +24,7 @@ export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
   if (isLoading) {
     return (
       <div
-        className={cn(s.commentCard, className)}
+        className={cn(s.commentCard, s.loading, className)}
       >
         <div className={s.header}>
           <Skeleton
@@ -45,11 +47,16 @@ export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
     );
   }
 
+  if (!comment) return null;
+
   return (
     <div
       className={cn(s.commentCard, className)}
     >
-      <div className={s.header}>
+      <AppLink
+        to={`${RouterPath.profile}/${comment.user.id}`}
+        className={s.header}
+      >
         {
           comment.user.avatar
             ? (
@@ -64,7 +71,7 @@ export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
           className={s.username}
           title={comment.user.username}
         />
-      </div>
+      </AppLink>
       <Text
         className={s.text}
         text={comment.text}

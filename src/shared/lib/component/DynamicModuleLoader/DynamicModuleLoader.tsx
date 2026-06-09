@@ -16,7 +16,7 @@ export const DynamicModuleLoader = (props: DynamicModuleLoaderProps) => {
   const {
     reducers,
     children,
-    removeAfterUnmount = false,
+    removeAfterUnmount = true,
   } = props;
 
   const dispatch = useAppDispatch();

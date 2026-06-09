@@ -1,5 +1,7 @@
 {
   "articleNotFound": "Cтатья не найдена",
   "error": "Произошла ошибка при загрузке статьи",
-  "comments": "Комментарии"
+  "comments": "Комментарии",
+  "addCommentBtn": "Отправить",
+  "inputFormPlaceholder": "Введите текст комментария"
 }

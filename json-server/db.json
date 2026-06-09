@@ -102,6 +102,42 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "sdsas",
+      "id": "ixDJTqQ"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "fgdghdffg",
+      "id": "8yeLaKK"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "yyuh",
+      "id": "YXxcXrq"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "sdsads",
+      "id": "NzT-Ho0"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "sdsasda",
+      "id": "TvwLxoA"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "hello",
+      "id": "CZJrmFe"
     }
   ],
   "users": [
@@ -120,14 +156,28 @@
       "avatar": "https://i.pinimg.com/736x/f6/60/a8/f660a85dd350ba9be384073af7d70e7a.jpg"
     }
   ],
-  "profile": {
-    "firstName": "Mir",
-    "lastName": "Mur",
-    "age": 1,
-    "currency": "EUR",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://i.pinimg.com/736x/f6/60/a8/f660a85dd350ba9be384073af7d70e7a.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "firstName": "Mir",
+      "lastName": "Mur",
+      "age": 20,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://img.magnific.com/premium-photo/cat-lawyer-working-office_548729-13424.jpg"
+    },
+    {
+      "id": "2",
+      "firstName": "Valtera",
+      "lastName": "A",
+      "age": 20,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "user",
+      "avatar": "https://i.pinimg.com/736x/f6/60/a8/f660a85dd350ba9be384073af7d70e7a.jpg"
+    }
+  ]
 }

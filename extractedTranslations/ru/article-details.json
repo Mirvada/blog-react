@@ -1,6 +1,8 @@
 {
   "Comments": "Comments",
+  "addCommentBtn": "addCommentBtn",
   "articleNotFound": "articleNotFound",
   "comments": "comments",
-  "error": "error"
+  "error": "error",
+  "inputFormPlaceholder": "inputFormPlaceholder"
 }

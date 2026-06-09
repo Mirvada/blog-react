@@ -9,6 +9,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   return (
     <div
       className={cn('', className)}
+    // eslint-disable-next-line
     >
       ArticlesPage
     </div>

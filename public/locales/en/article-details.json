@@ -1,5 +1,7 @@
 {
   "articleNotFound": "Article not found",
   "error": "",
-  "comments": "Comments"
+  "comments": "Comments",
+  "addCommentBtn": "Post",
+  "inputFormPlaceholder": "Enter the comment text"
 }
