@@ -3,5 +3,7 @@
   "error": "",
   "comments": "Comments",
   "addCommentBtn": "Post",
-  "inputFormPlaceholder": "Enter the comment text"
+  "inputFormPlaceholder": "Enter the comment text",
+  "back": "Back to the list",
+  "readMore": "Read more..."
 }

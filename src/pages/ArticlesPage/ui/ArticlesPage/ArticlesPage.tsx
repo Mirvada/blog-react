@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
 import { cn } from 'shared/lib/cn';
 
 interface ArticlesPageProps {
@@ -9,9 +10,12 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   return (
     <div
       className={cn('', className)}
-    // eslint-disable-next-line
     >
-      ArticlesPage
+      <ArticleList
+        articles={[]}
+        view="grid"
+        isLoading={false}
+      />
     </div>
   );
 };

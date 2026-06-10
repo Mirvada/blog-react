@@ -2,7 +2,9 @@
   "Comments": "Comments",
   "addCommentBtn": "addCommentBtn",
   "articleNotFound": "articleNotFound",
+  "back": "back",
   "comments": "comments",
   "error": "error",
-  "inputFormPlaceholder": "inputFormPlaceholder"
+  "inputFormPlaceholder": "inputFormPlaceholder",
+  "readMore": "readMore"
 }

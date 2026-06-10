@@ -1,11 +1,14 @@
 .app_light_theme {
-  --bg-color: #121214;
-  --inverted-bg-color: #F8F9FA;
-  --primary-color: #7C3AED;
-  --secondary-color: #EC4899;
-  --inverted-primary-color: #4C1D95;
-  --inverted-secondary-color: #BE185D;
+  --bg-color: #F8F9FA;
+  --inverted-bg-color: #121214;
+  --primary-color: #4C1D95;
+  --secondary-color: #BE185D;
+  --inverted-primary-color: #7C3AED;
+  --inverted-secondary-color: #EC4899;
   --skeleton-shadow: #EC4899;
   --skeleton-color: #BE185D;
-  --code-bg: #fff;
+  --code-bg: #1a1a1d;
+
+  // card
+  --card-bg: #e2e2e2;
 }
