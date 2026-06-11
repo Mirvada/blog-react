@@ -13,7 +13,7 @@ interface ArticleListProps {
 }
 
 const getSkeletons = (view: ArticleView) => {
-  return new Array(view === 'grid' ? 9 : 3)
+  return new Array(view === 'tiled' ? 9 : 3)
     .fill(0)
     .map((_, index) => (
       <ArticleListItemSkeleton
@@ -29,7 +29,7 @@ export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
     className,
     articles,
     isLoading,
-    view = 'grid',
+    view = 'tiled',
   } = props;
 
   if (isLoading) {

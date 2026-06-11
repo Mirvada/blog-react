@@ -32,7 +32,7 @@ export type ArticleBlock = ArticleCodeBlock | ArticleTextBlock | ArticleImageBlo
 
 export type ArticleType = 'IT' | 'SCIENCE' | 'ECONOMICS';
 
-export type ArticleView = 'grid' | 'row';
+export type ArticleView = 'tiled' | 'list';
 
 export interface Article {
   id: string;

@@ -1,4 +1,4 @@
-.grid {
+.tiled {
   width: 228px;
   transition: 0.2s;
   cursor: pointer;
@@ -62,7 +62,7 @@
 }
 
 
-.row {
+.list {
   .header {
     display: flex;
     align-items: center;

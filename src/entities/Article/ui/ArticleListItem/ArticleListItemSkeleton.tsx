@@ -16,7 +16,7 @@ export const ArticleListItemSkeleton = memo(function ArticleListItem(props: Arti
     view,
   } = props;
 
-  if (view === 'row') {
+  if (view === 'list') {
     return (
       <div
         className={cn('', s[view], className)}

@@ -33,7 +33,7 @@ export const ArticleListItem = memo(function ArticleListItem(props: ArticleListI
     navigate(RouterPath.articles_details + article.id);
   }, [navigate, article.id]);
 
-  if (view === 'row') {
+  if (view === 'list') {
     const textBlock = article.blocks.find(block => block.type === ArticleBlockType.TEXT) as ArticleTextBlock;
 
     return (
