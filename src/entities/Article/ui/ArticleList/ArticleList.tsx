@@ -32,14 +32,6 @@ export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
     view = 'tiled',
   } = props;
 
-  if (isLoading) {
-    return (
-      <div className={cn('', s[view], className)}>
-        {getSkeletons(view)}
-      </div>
-    );
-  }
-
   return (
     <div
       className={cn('', s[view], className)}
@@ -54,6 +46,7 @@ export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
           />
         ))
         : null}
+      {isLoading && getSkeletons(view)}
     </div>
   );
 });

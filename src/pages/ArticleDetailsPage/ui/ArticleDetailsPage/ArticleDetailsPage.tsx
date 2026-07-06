@@ -10,6 +10,7 @@ import { DynamicModuleLoader, ReducerList } from 'shared/lib/component/DynamicMo
 import { RouterPath } from 'shared/config/routerConfig/routerConfig';
 import { Text } from 'shared/ui/Text/Text';
 import { Button } from 'shared/ui/Button';
+import { Page } from 'shared/ui/Page/Page';
 import { cn } from 'shared/lib/cn';
 import { articleDetailsCommentsReducer, getArticleComments } from '../../model/slice/articleDetailsCommentsSlice';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
@@ -48,11 +49,11 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 
   if (!id) {
     return (
-      <div
+      <Page
         className={cn(s.articleDetailsPage, className)}
       >
         {t('articleNotFound')}
-      </div>
+      </Page>
     );
   }
 
@@ -61,7 +62,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
       reducers={initialReducers}
       removeAfterUnmount
     >
-      <div
+      <Page
         className={cn('', className)}
       >
         <Button
@@ -80,7 +81,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
           comments={comments}
           isLoading={isLoading}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };

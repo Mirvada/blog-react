@@ -19,8 +19,9 @@ import { Country } from 'entities/Country';
 import { cn } from 'shared/lib/cn';
 import { DynamicModuleLoader, ReducerList } from 'shared/lib/component/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 import { Text } from 'shared/ui/Text/Text';
+import { Page } from 'shared/ui/Page/Page';
+import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 interface ProfilePageProps {
   className?: string;
@@ -98,7 +99,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
       reducers={initialReducers}
       removeAfterUnmount
     >
-      <div
+      <Page
         className={cn('', className)}
       >
         <ProfilePageHeader />
@@ -123,7 +124,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
           onChangeCurrency={onChangeCurrency}
           onChangeCountry={onChangeCountry}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };

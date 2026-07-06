@@ -24,14 +24,12 @@ function App() {
         <Navbar />
         <div className="content-page">
           <Sidebar />
-          <div className="page-wrapper">
-            <Suspense
-              key={location.key}
-              fallback={<PageLoader />}
-            >
-              {initiated && <AppRouter />}
-            </Suspense>
-          </div>
+          <Suspense
+            key={location.key}
+            fallback={<PageLoader />}
+          >
+            {initiated && <AppRouter />}
+          </Suspense>
         </div>
       </Suspense>
     </div>
