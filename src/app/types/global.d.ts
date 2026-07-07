@@ -26,3 +26,5 @@ declare const __API__: string;
 type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
+
+type OptionalRecord<K extends keyof any, T> = Partial<Record<K, T>>;

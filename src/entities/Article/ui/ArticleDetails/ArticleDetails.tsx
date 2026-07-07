@@ -47,6 +47,7 @@ export const ArticleDetails = memo(function ArticleDetails({ className, id }: Ar
         return (
           <ArticleCodeBlockComponent
             className={s.block}
+            key={block.id}
             block={block}
           />
         );
@@ -54,6 +55,7 @@ export const ArticleDetails = memo(function ArticleDetails({ className, id }: Ar
         return (
           <ArticleImageBlockComponent
             className={s.block}
+            key={block.id}
             block={block}
           />
         );
@@ -61,6 +63,7 @@ export const ArticleDetails = memo(function ArticleDetails({ className, id }: Ar
         return (
           <ArticleTextBlockComponent
             className={s.block}
+            key={block.id}
             block={block}
           />
         );
