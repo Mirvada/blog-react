@@ -1,7 +1,7 @@
 import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { ArticleList, ArticleView, ArticleViewSelector } from 'entities/Article';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { DynamicModuleLoader, ReducerList } from 'shared/lib/component/DynamicModuleLoader/DynamicModuleLoader';
 import { cn } from 'shared/lib/cn';

@@ -10,7 +10,7 @@ import { DynamicModuleLoader, ReducerList } from 'shared/lib/component/DynamicMo
 import { RouterPath } from 'shared/config/routerConfig/routerConfig';
 import { Text } from 'shared/ui/Text/Text';
 import { Button } from 'shared/ui/Button';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { cn } from 'shared/lib/cn';
 import { articleDetailsCommentsReducer, getArticleComments } from '../../model/slice/articleDetailsCommentsSlice';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
